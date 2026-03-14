@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription complet</title>
+    <style>
+        h1{
+            text-align: center;
+            color: #2c3e50;
+        }
+        body{
+            background-color:#f4f6f9;
+            font-family: Arial,sans-serif;
+        }
+        fieldset{
+            background-color:white;
+            padding:20px;
+            margin:20px;
+            border-radius:10px;
+            border: 1px solid #ddd;
+        }
+        button{
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📃Formulaire d'inscription</h1>
+    </header>
+    <main>
+      
+        <form method="post">   
+
+            <fieldset>
+                <legend>👤Informations personnelles</legend>                <label for="fname">NOM :</label>
+                <input type="text" id="fname" name="fname"  required autocomplete="family-name">
+            
+                <br><br>
+
+                <label for="lname">PRÉNOM :</label>
+                <input type="text" id="lname" name="lname"  required autocomplete="given-name">
+            
+                <br><br>
+            
+                <label for="mail">EMAIL :</label>
+                <input type="email" id="mail" name="mail" placeholder="exemple@gmail.com" required autocomplete="email">
+            
+                <br><br>
+            
+                <label for="phone">N° TELEPHONE :</label>
+                <input type="tel" id="phone" name="phone"  placeholder="+33 X XX XX XX XX" required>
+            
+                <br><br>
+            
+                <label for="birth">DATE DE NAISSANCE :</label>
+                <input type="date" id="birth" name="birth" required >
+            
+                <br><br>
+            </fieldset>
+            
+            <br>
+
+            <fieldset>
+                <legend>🔒Sécurité</legend>
+
+                <label for="password">MOT DE PASSE :</label>
+                <input type="password" id="password" name="password" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" title="Au moins 8 caractères , une majuscule et un chiffre" required>
+            
+                <br><br>
+
+                <label for="confirm">CONFIRMER LE MOT DE PASSE :</label>
+                <input type="password" id="confirm" name="confirm" required>
+            
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>➕Informations supplémentaires</legend>
+                <label for="pays">PAYS :</label>
+                <input list="pays" name="pays" required>
+                <datalist id="pays">
+                    <option value="Maroc">
+                    <option value="France">
+                    <option value="Italie">
+                    <option value="Espagne">
+                    <option value="Canada">
+                </datalist>
+            
+                <br><br>
+            
+                <label for="genre">GENRE :</label>
+
+                <label for="homme">♂️</label>
+                <input type="radio" id="homme" name="genre" required>
+
+                <label for="femme">♀️</label>
+                <input type="radio" id="femme" name="genre" required>
+            
+                <br><br>
+            
+                <label for="interet">CENTRE D'INTÉRET :</label>
+        
+                <label for="int1">SPORT</label>
+                <input type="checkbox" id="int1" name="interet">
+
+                <label for="int2">MUSIQUE</label>
+                <input type="checkbox" id="int2" name="interet">
+
+                <label for="int3">LECTURE</label>
+                <input type="checkbox" id="int3" name="interet">
+                
+                <label for="int4">ART</label>
+                <input type="checkbox" id="int4" name="interet">
+
+                <label for="int5">DESIGNE</label>
+                <input type="checkbox" id="int5" name="interet">
+
+                <label for="int6">PHOTOGRAPHY</label>
+                <input type="checkbox" id="int6" name="interet">
+                
+                <label for="int0">AUTRE</label>
+                <input type="checkbox" id="int0" name="interet">
+            
+                <br><br>
+            
+                <label for="biog">BIOGRAPHIE :</label>
+                <textarea name="biog" id="biog" rows="4" cols="40" maxlength="200" required placeholder="Parler un peu de vous..."></textarea>
+            
+                <br><br>
+            
+                <label for="pic">PHOTO PROFILE :</label>
+                <input type="file" id="pic" name="pic" required accept="image/*">
+            
+            </fieldset>
+
+            <br>
+            
+    
+            <input type="checkbox" required>
+            ✔️ j'accepte les conditions générales d'utilisations
+
+            <br><br>
+
+            <button type="submit">S'inscrire</button>
+
+        </form>
+    </main>
+</body>
+</html>
